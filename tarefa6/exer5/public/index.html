@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <title>Exercício - 5</title>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <div class="form-group">
+      <fieldset class="border p-2 shadow p-3 mb-5 bg-white rounded">
+        <legend class="w-auto text-success border p-2 shadow p-2 mb-3 bg-white rounded">Exercício - 5</legend>
+        <p class="font-weight-light text-justify">
+          Crie uma aplicação React com dois componentes chamados "Recipiente" e "Garrafa".
+          <br>O componente "Recipiente" deve conter:
+          <br>• Método "constructor", utilizando o objeto state com a seguinte chave e valor:
+          <br>mostrar: true
+          <br>• Arrow function chamada "removerCabecalho", que altere o objeto state para false.
+          <br>• Método "render", que verifique o valor do objeto state. Caso seja true, a variável "meuCabecalho" deverá
+          receber o componente "Garrafa" (meuCabecalho =
+          <Garrafa />;). Nesse caso, renderize o valor da variável "meuCabecalho" e um botão chamado "Remover
+          Cabeçalho", que no evento "onClick" chame a função "removerCabecalho".
+          <br>O componente "Garrafa" deve conter:
+          <br>• Método "componentWillUnmount", que use uma caixa de alerta ("alert") para exibir a seguinte mensagem: O
+          componente chamado Cabecalho está prestes a ser desmontado.
+          <br>• Método "render" para renderizar a seguinte mensagem na tela do browser:
+          <br>Olá, React!
+          <br>Ao clicar no botão "Remover Cabeçalho", a mensagem da caixa de alerta será exibida e, em seguida, a
+          mensagem "Olá, React" não será renderizada.
+        </p>
+
+        <div>
+          <p class="font-weight-light text-success">Resposta:</p>
+          <div id="exer5"></div>
+        </div>
+
+      </fieldset>
+    </div>
+
+  </div>
+
+</body>
+
+</html>

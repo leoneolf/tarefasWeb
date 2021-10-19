@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Exercício - 4</title>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="form-group">
+            <fieldset class="border p-2 shadow p-3 mb-5 bg-white rounded">
+                <legend class="w-auto text-success border p-2 shadow p-2 mb-3 bg-white rounded">Exercício - 4</legend>
+                <p class="font-weight-light text-justify">
+                    Crie uma classe chamada "Quadrado" com ES6, que herdará os métodos da classe "Poligono". A classe
+                    "Poligono" deve ter os seguintes métodos: constructor(altura, largura) e mostrarNome() para retornar
+                    a seguinte mensagem: Olá, eu sou um Polígono. A classe "Quadrado" deve ter os seguintes métodos:
+                    constructor(comprimento) e get area(). Em seguida, crie um objeto de cada uma das classes e, no
+                    final, mostre as seguintes mensagens no browser:
+                    <br>Olá, eu sou um Polígono.
+                    <br>Olá, eu sou um Quadrado.
+                    <br>A área do quadrado é: {mostrar o respectivo valor}.
+                </p>
+
+                <div>
+                    <p class="font-weight-light text-success">Resposta:</p>
+                    <script>
+                        class Poligono {
+                            constructor(nome, altura, largura) {
+                                this.nome = nome;
+                                this.altura = altura;
+                                this.largura = largura;
+                            }
+
+                            mostrarNome() {
+                                return "Olá, eu sou um " + this.nome + ".";
+                            }
+                        }
+
+                        class Quadrado extends Poligono {
+                            constructor(nome, altura, largura, comprimento) {
+                                super(nome, altura, largura);
+                                this.comprimento = comprimento;
+                            }
+
+                            mostrarNome() {
+                                return "<br>Olá, eu sou um " + this.nome + ".";
+                            }
+
+                            getArea() {
+                                return "<br>A área do quadrado é: " + (this.comprimento * this.comprimento) + ".";
+                            }
+                        }
+
+                        poli = new Poligono("Polígono", "5", "5");
+                        document.write(poli.mostrarNome());
+
+                        quad = new Quadrado("Quadrado", "7", "7", "7");
+                        document.write(quad.mostrarNome());
+                        document.write(quad.getArea());
+                    </script>
+                </div>
+
+            </fieldset>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

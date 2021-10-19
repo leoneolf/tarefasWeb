@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Exercício - 7</title>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="form-group">
+            <fieldset class="border p-2 shadow p-3 mb-5 bg-white rounded">
+                <legend class="w-auto text-success border p-2 shadow p-2 mb-3 bg-white rounded">Exercício - 7</legend>
+                <p class="font-weight-light text-justify">
+                    Faça uma função anônima com ES6, armazenada na variável descobrirDiametro, que receba o parâmetro
+                    "raio" e imprima a seguinte mensagem no browser: O diâmetro é: {mostrar o respectivo valor}.
+                </p>
+
+                <div>
+                    <p class="font-weight-light text-success">Resposta:</p>
+                    <p id="exer7"></p>
+                    <script>
+                        descobrirDiametro = function (raio) {
+                            return "O diâmetro é: " + (raio * 2) + " cm.";
+                        }
+                        document.getElementById("exer7").innerHTML = descobrirDiametro("4");
+                    </script>
+                </div>
+
+            </fieldset>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

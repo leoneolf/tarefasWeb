@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Exercício - 8</title>
+    <!-- 3 CDNs - React, ReactDOM, Babel-->
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="form-group">
+            <fieldset class="border p-2 shadow p-3 mb-5 bg-white rounded">
+                <legend class="w-auto text-success border p-2 shadow p-2 mb-3 bg-white rounded">Exercício - 8</legend>
+                <p class="font-weight-light text-justify">
+                    Escreva código com JSX, diretamente em uma página HTML, para inserir uma tabela com os nomes João e
+                    Maria.
+                </p>
+
+                <div>
+                    <p class="font-weight-light text-success">Resposta:</p>
+                    <div id="exer8"></div>
+                    <script type="text/babel">
+                        const tabela = (
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col">
+                                        <input type="text" class="form-control" placeholder="Insira um nome" />
+                                    </div>
+                                    <div class="col">
+                                        <input type="text" class="form-control" placeholder="Insira um nome" />
+                                    </div>
+                                </div>
+                            </div>
+                        );
+                        ReactDOM.render(tabela, document.getElementById("exer8"));
+                    </script>
+                </div>
+
+            </fieldset>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

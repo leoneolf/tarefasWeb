@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Exercício - 6</title>
+    <!-- 3 CDNs - React, ReactDOM, Babel-->
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="form-group">
+            <fieldset class="border p-2 shadow p-3 mb-5 bg-white rounded">
+                <legend class="w-auto text-success border p-2 shadow p-2 mb-3 bg-white rounded">Exercício - 6</legend>
+                <p class="font-weight-light text-justify">
+                    Escreva código com JSX, diretamente em uma página HTML, para calcular a soma dos quadrados de três números inteiros.
+                </p>
+
+                <div>
+                    <p class="font-weight-light text-success">Resposta:</p>
+                    <div id="exer6"></div>
+                    <script type="text/babel">
+                        const somaQuadrado = <p>A soma dos quadrados dos números: 14, 5 e 97 é igual a: {(14 * 14) + (5 * 5) + (97 * 97)}.</p>
+                        ReactDOM.render(somaQuadrado, document.getElementById("exer6"));                        
+                    </script>
+                </div>
+
+            </fieldset>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

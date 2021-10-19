@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Exercício - 3</title>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="form-group">
+            <fieldset class="border p-2 shadow p-3 mb-5 bg-white rounded">
+                <legend class="w-auto text-success border p-2 shadow p-2 mb-3 bg-white rounded">Exercício - 3</legend>
+                <p class="font-weight-light text-justify">
+                    Crie uma classe chamada "FuncionarioComissionado" com ES6, que herdará os métodos da classe
+                    "Funcionario". A classe "Funcionario" deve ter os seguintes métodos: constructor(nome, numCTPS,
+                    salario) e mostrarDados() para retornar todos os dados de um funcionário. A classe
+                    "FuncionarioComissionado" deve ter os seguintes métodos: constructor(nome, numCTPS, salario, venda,
+                    comissao) e mostrarDados() para retornar todos os dados de um funcionário comissionado. Em seguida,
+                    crie um objeto de cada uma das classes e mostre os respectivos dados no browser.
+                </p>
+
+                <div>
+                    <p class="font-weight-light text-success">Resposta:</p>
+                    <script>
+                        class Funcionario {
+                            constructor(nome, numCTPS, salario) {
+                                this.nome = nome;
+                                this.numCTPS = numCTPS;
+                                this.salario = salario;
+                            }
+
+                            mostrarDadosFun() {
+                                return "O funcionario " + this.nome + ", portador do número CTPS: " + this.numCTPS + ", possui um salário de R$" + this.salario + ".";
+                            }
+                        }
+
+                        class FuncionarioComissionado extends Funcionario {
+                            constructor(nome, numCTPS, salario, venda, comissao) {
+                                super(nome, numCTPS, salario);
+                                this.venda = venda;
+                                this.comissao = comissao;
+                            }
+
+                            mostrarDadosFunCom() {
+                                return "<br><br>" + this.mostrarDadosFun() + " Com um total de vendas de R$" + this.venda + " e com uma comissão de " + this.comissao + "%.";
+                            }
+                        }
+
+                        meuFuncionario = new Funcionario("Luiz Miguel", "12345678", "1.500,00");
+                        document.write(meuFuncionario.mostrarDadosFun());
+
+                        meuFuncionario2 = new FuncionarioComissionado("José Barbosa", "87654321", "2.500,00", "12.689,00", "5");
+                        document.write(meuFuncionario2.mostrarDadosFunCom());
+                    </script>
+                </div>
+
+            </fieldset>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

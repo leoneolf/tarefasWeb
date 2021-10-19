@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Exercício - 7</title>
+    <!-- 3 CDNs - React, ReactDOM, Babel-->
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="form-group">
+            <fieldset class="border p-2 shadow p-3 mb-5 bg-white rounded">
+                <legend class="w-auto text-success border p-2 shadow p-2 mb-3 bg-white rounded">Exercício - 7</legend>
+                <p class="font-weight-light text-justify">
+                    Escreva código com JSX, diretamente em uma página HTML, para inserir as tags de cabeçalhos (de {h1}a {h6}).
+                </p>
+
+                <div>
+                    <p class="font-weight-light text-success">Resposta:</p>
+                    <div id="exer7"></div>
+                    <script type="text/babel">
+                        const cabecalho = (
+                            <div class="form-group">
+                                <h1>H1</h1>
+                                <h2>H2</h2>
+                                <h3>H3</h3>
+                                <h4>H4</h4>
+                                <h5>H5</h5>
+                                <h6>H6</h6>
+                            </div>
+                        );
+                        ReactDOM.render(cabecalho, document.getElementById("exer7"));
+                    </script>
+                </div>
+
+            </fieldset>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
